@@ -1,10 +1,14 @@
+<button (click)="onSubmit();" class="full-width">Next</button>
+
 <div *ngIf="apod">
   <h1 id="apodTitle">{{ apod.title }}</h1>
-  <img id="apodImg">
-  <div id="apodVideo">
-    <iframe></iframe>
+  <div id="apodImg">
+    <img src="{{ apod.url }}">
   </div>
-  <div id="apodDate">date</div>
-  <div id="apodCopy">copy</div>
-  <div id="apodExp">Explanation</div>
+  <div id="apodVideo">
+    <iframe src="{{ apod.url }}"></iframe>
+  </div>
+  <div id="apodDate">{{ apod.date }}</div>
+  <div id="apodCopy">{{ apod.copyright }}</div>
+  <div id="apodExp">{{ apod.explanation }}</div>
 </div>

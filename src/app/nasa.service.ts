@@ -21,8 +21,8 @@ export class NasaService {
     return `${this.domain}${this.args}${this.nasaKey}${date}`;
   }
 
-  getApod(): Observable<Nasa> {
-    return this.http.get<Nasa>(this.getUrl());
+  getApod(date=''): Observable<Nasa> {
+    return this.http.get<Nasa>(this.getUrl(date));
   }
 
 }
