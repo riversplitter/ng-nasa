@@ -2,9 +2,9 @@
 
 <div *ngIf="apod">
   <h1 id="apodTitle">{{ apod.title }}</h1>
-  <img id="apodImg" src="{{ apod.url }}">
-  <div id="apodVideo">
-    <iframe src="{{ apod.url }}"></iframe>
+  <img *ngIf="apod.media_type == 'image'" id="apodImg" src="{{ apod.url }}">
+  <div *ngIf="apod.media_type == 'video'" id="apodVideo">
+    <iframe src="{{ apod.url }}" frameborder="0"></iframe>
   </div>
   <div id="apodDate">{{ apod.date }}</div>
   <div id="apodCopy">{{ apod.copyright }}</div>
