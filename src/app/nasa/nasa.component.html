@@ -2,9 +2,7 @@
 
 <div *ngIf="apod">
   <h1 id="apodTitle">{{ apod.title }}</h1>
-  <div id="apodImg">
-    <img src="{{ apod.url }}">
-  </div>
+  <img id="apodImg" src="{{ apod.url }}">
   <div id="apodVideo">
     <iframe src="{{ apod.url }}"></iframe>
   </div>
