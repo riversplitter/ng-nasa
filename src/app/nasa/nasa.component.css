@@ -1,4 +1,14 @@
 /* APOD */
+button {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #000;
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 #apodImg {
   max-width: 100%;
 }

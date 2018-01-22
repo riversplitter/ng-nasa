@@ -6,7 +6,7 @@
   <div *ngIf="apod.media_type == 'video'" id="apodVideo">
     <iframe [src]='apod.url | safe' frameborder="0" allowfullscreen></iframe>
   </div>
-  <div id="apodDate">{{ apod.date }}</div>
+  <div id="apodDate">{{ apod.date |date:medium }}</div>
   <div *ngIf="apod.copyright" id="apodCopy">&copy;{{ apod.copyright }}</div>
   <div id="apodExp">{{ apod.explanation }}</div>
 </div>
