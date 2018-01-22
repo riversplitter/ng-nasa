@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { NasaComponent } from './nasa/nasa.component';
 
 import { NasaService } from './nasa.service';
+import { SafePipe } from './safe-pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NasaComponent
+    NasaComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
