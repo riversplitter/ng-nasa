@@ -17,7 +17,7 @@ export class NasaComponent implements OnInit {
     this.getApod();
   }
 
-  getApod(date='1996-07-25'): void {
+  getApod(date=''): void {
     this.nasaService.getApod(date)
       .subscribe(apod => this.apod = apod);
   }
