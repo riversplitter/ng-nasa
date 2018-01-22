@@ -23,7 +23,32 @@ export class NasaComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.getApod('2017-05-23');
+    let date = this.randomDate(new Date(1995, 5, 16), new Date());
+    this.getApod(date);
+  }
+
+  //Create a random apodDate
+  randomDate(start, end): string {
+
+    let date = new Date(
+      start.getTime() + Math.random() * (end.getTime() - start.getTime())
+    );
+
+    //Format the date
+    let d = date.getDate();
+    let m = date.getMonth() + 1;
+    let y = date.getFullYear();
+
+    if(m < 10){
+      m = '0' + m;
+    }
+
+    if(d < 10){
+      d = '0' + d;
+    }
+
+    return `${y}-${m}-${d}`;
+
   }
 
 
